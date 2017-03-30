@@ -1,16 +1,18 @@
-
+/*
+ * è¿™ä¸ªç±»ç”¨æ¥å°†åè¿›åˆ¶åæ ‡å’Œå¼§åº¦è¿›è¡Œè½¬æ¢
+ */
 
 public class DmsRad {
 
 	public static double p = 180.0 / Math.PI * 3600;
 	
-	// ½«¶È·ÖÃë»¯Îª»¡¶ÈÖµ
+	// å°†åº¦åˆ†ç§’åŒ–ä¸ºå¼§åº¦å€¼
 	public static double dms2rad(int d, int m, int s){
 		double dms = (d * 3600.0 + m * 60.0 + s) / p;
 		return dms;
 	}
 	
-	//½«»¡¶ÈÖµ×ª»¯Îª¶È·ÖÃë
+	//å°†å¼§åº¦å€¼è½¬åŒ–ä¸ºåº¦åˆ†ç§’
 	public static int [] rad2dms (double rad){
 		int []a = new int[3];
 		double dms = rad *p;
@@ -20,14 +22,14 @@ public class DmsRad {
 		return a;
 	}
 	
-	//½«¶È·ÖÃë×ª»¯ÎªÊ®½øÖÆ×ø±ê
+	//å°†åº¦åˆ†ç§’è½¬åŒ–ä¸ºåè¿›åˆ¶åæ ‡
 	public static double dms2dec (int [] dms){
 		double dec = 0.0;
 		dec = dms[0]+dms[1]/60.0+dms[2]/3600.0;
 		return dec;
 	}
 	
-	//½«Ê®½øÖÆ×ø±ê×ª»»Îª¶È·ÖÃë
+	//å°†åè¿›åˆ¶åæ ‡è½¬æ¢ä¸ºåº¦åˆ†ç§’
 	public static int [] dec2Dms (double x){
 		int []a = new int[3];
 		
